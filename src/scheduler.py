@@ -39,12 +39,7 @@ class MySQLDB(object):
         self.password = "Uecom@server"  # 密码
         self.db = "gtzb_dev"  # 库
 
-        # 国投
-        # self.host = '172.30.202.101'
-        # self.port = 3306  # 端口号
-        # self.user = 'root'  # 用户名
-        # self.password = "GTZB@2019"  # 密码
-        # self.db = "gtzb"  # 库
+
 
     # 连接数据库
     def connectMysql(self):

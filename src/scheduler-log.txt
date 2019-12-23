@@ -5,3 +5,204 @@
 2019-12-04 19:12:31 base.py[line:166] INFO Scheduler started
 2019-12-23 21:00:05 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
 2019-12-23 21:00:05 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-23 21:00:32 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-23 21:00:32 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-23 21:00:32 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-23 21:00:32 base.py[line:881] INFO Added job "saveTaskCwsj" to job store "default"
+2019-12-23 21:00:32 base.py[line:881] INFO Added job "saveTaskYjzb" to job store "default"
+2019-12-23 21:00:32 base.py[line:881] INFO Added job "saveTaskRzrq" to job store "default"
+2019-12-23 21:00:32 base.py[line:166] INFO Scheduler started
+2019-12-23 21:00:52 base.py[line:123] INFO Running job "saveTaskCwsj (trigger: cron[hour='21', minute='1'], next run at: 2019-12-23 21:00:52 CST)" (scheduled at 2019-12-23 21:00:52.668627+08:00)
+2019-12-23 21:00:52 scheduler.py[line:359] INFO ************************ 写入安信证券财务数据 start ************************
+2019-12-23 21:00:52 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-22:
+2019-12-23 21:00:52 scheduler.py[line:345] INFO wind编码：600061.SH 数据不全，不写入。
+2019-12-23 21:00:54 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-21:
+2019-12-23 21:00:55 scheduler.py[line:345] INFO wind编码：600061.SH 数据不全，不写入。
+2019-12-23 21:00:57 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-20:
+2019-12-23 21:00:57 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:00:59 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-22:
+2019-12-23 21:00:59 scheduler.py[line:345] INFO wind编码：882501.WI 数据不全，不写入。
+2019-12-23 21:01:01 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-21:
+2019-12-23 21:01:01 scheduler.py[line:345] INFO wind编码：882501.WI 数据不全，不写入。
+2019-12-23 21:01:03 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-20:
+2019-12-23 21:01:03 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:05 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:05 scheduler.py[line:345] INFO wind编码：600705.SH 数据不全，不写入。
+2019-12-23 21:01:07 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:07 scheduler.py[line:345] INFO wind编码：600705.SH 数据不全，不写入。
+2019-12-23 21:01:07 base.py[line:123] INFO Running job "saveTaskCwsj (trigger: cron[hour='21', minute='1'], next run at: 2019-12-23 21:01:07 CST)" (scheduled at 2019-12-23 21:01:07.764137+08:00)
+2019-12-23 21:01:07 scheduler.py[line:359] INFO ************************ 写入安信证券财务数据 start ************************
+2019-12-23 21:01:07 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:07 scheduler.py[line:345] INFO wind编码：600061.SH 数据不全，不写入。
+2019-12-23 21:01:09 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:09 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:09 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:09 scheduler.py[line:345] INFO wind编码：600061.SH 数据不全，不写入。
+2019-12-23 21:01:11 scheduler.py[line:372] INFO 写入wind编码为600390.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:11 scheduler.py[line:345] INFO wind编码：600390.SH 数据不全，不写入。
+2019-12-23 21:01:12 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:12 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:13 scheduler.py[line:372] INFO 写入wind编码为600390.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:13 scheduler.py[line:345] INFO wind编码：600390.SH 数据不全，不写入。
+2019-12-23 21:01:14 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-22:
+2019-12-23 21:01:14 scheduler.py[line:345] INFO wind编码：882501.WI 数据不全，不写入。
+2019-12-23 21:01:15 scheduler.py[line:372] INFO 写入wind编码为600390.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:15 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:16 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-21:
+2019-12-23 21:01:16 scheduler.py[line:345] INFO wind编码：882501.WI 数据不全，不写入。
+2019-12-23 21:01:17 scheduler.py[line:372] INFO 写入wind编码为002423.SZ的数据，日期：2019-12-22:
+2019-12-23 21:01:17 scheduler.py[line:345] INFO wind编码：002423.SZ 数据不全，不写入。
+2019-12-23 21:01:18 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-20:
+2019-12-23 21:01:18 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:19 scheduler.py[line:372] INFO 写入wind编码为002423.SZ的数据，日期：2019-12-21:
+2019-12-23 21:01:19 scheduler.py[line:345] INFO wind编码：002423.SZ 数据不全，不写入。
+2019-12-23 21:01:20 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:20 scheduler.py[line:345] INFO wind编码：600705.SH 数据不全，不写入。
+2019-12-23 21:01:21 scheduler.py[line:372] INFO 写入wind编码为002423.SZ的数据，日期：2019-12-20:
+2019-12-23 21:01:22 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:22 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:22 scheduler.py[line:345] INFO wind编码：600705.SH 数据不全，不写入。
+2019-12-23 21:01:24 scheduler.py[line:372] INFO 写入wind编码为000617.SZ的数据，日期：2019-12-22:
+2019-12-23 21:01:24 scheduler.py[line:345] INFO wind编码：000617.SZ 数据不全，不写入。
+2019-12-23 21:01:24 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:24 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:26 scheduler.py[line:372] INFO 写入wind编码为000617.SZ的数据，日期：2019-12-21:
+2019-12-23 21:01:26 scheduler.py[line:345] INFO wind编码：000617.SZ 数据不全，不写入。
+2019-12-23 21:01:26 scheduler.py[line:372] INFO 写入wind编码为600390.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:26 scheduler.py[line:345] INFO wind编码：600390.SH 数据不全，不写入。
+2019-12-23 21:01:28 scheduler.py[line:372] INFO 写入wind编码为000617.SZ的数据，日期：2019-12-20:
+2019-12-23 21:01:28 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:28 scheduler.py[line:372] INFO 写入wind编码为600390.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:28 scheduler.py[line:345] INFO wind编码：600390.SH 数据不全，不写入。
+2019-12-23 21:01:30 scheduler.py[line:372] INFO 写入wind编码为600958.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:30 scheduler.py[line:345] INFO wind编码：600958.SH 数据不全，不写入。
+2019-12-23 21:01:30 scheduler.py[line:372] INFO 写入wind编码为600390.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:30 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:32 scheduler.py[line:372] INFO 写入wind编码为600958.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:32 scheduler.py[line:345] INFO wind编码：600958.SH 数据不全，不写入。
+2019-12-23 21:01:32 scheduler.py[line:372] INFO 写入wind编码为002423.SZ的数据，日期：2019-12-22:
+2019-12-23 21:01:32 scheduler.py[line:345] INFO wind编码：002423.SZ 数据不全，不写入。
+2019-12-23 21:01:34 scheduler.py[line:372] INFO 写入wind编码为600958.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:34 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:34 scheduler.py[line:372] INFO 写入wind编码为002423.SZ的数据，日期：2019-12-21:
+2019-12-23 21:01:35 scheduler.py[line:345] INFO wind编码：002423.SZ 数据不全，不写入。
+2019-12-23 21:01:36 scheduler.py[line:372] INFO 写入wind编码为601901.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:36 scheduler.py[line:345] INFO wind编码：601901.SH 数据不全，不写入。
+2019-12-23 21:01:37 scheduler.py[line:372] INFO 写入wind编码为002423.SZ的数据，日期：2019-12-20:
+2019-12-23 21:01:37 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:38 scheduler.py[line:372] INFO 写入wind编码为601901.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:38 scheduler.py[line:345] INFO wind编码：601901.SH 数据不全，不写入。
+2019-12-23 21:01:39 scheduler.py[line:372] INFO 写入wind编码为000617.SZ的数据，日期：2019-12-22:
+2019-12-23 21:01:39 scheduler.py[line:345] INFO wind编码：000617.SZ 数据不全，不写入。
+2019-12-23 21:01:40 scheduler.py[line:372] INFO 写入wind编码为601901.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:40 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:41 scheduler.py[line:372] INFO 写入wind编码为000617.SZ的数据，日期：2019-12-21:
+2019-12-23 21:01:41 scheduler.py[line:345] INFO wind编码：000617.SZ 数据不全，不写入。
+2019-12-23 21:01:42 scheduler.py[line:372] INFO 写入wind编码为601788.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:43 scheduler.py[line:372] INFO 写入wind编码为000617.SZ的数据，日期：2019-12-20:
+2019-12-23 21:01:43 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:43 scheduler.py[line:345] INFO wind编码：601788.SH 数据不全，不写入。
+2019-12-23 21:01:45 scheduler.py[line:372] INFO 写入wind编码为600958.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:45 scheduler.py[line:372] INFO 写入wind编码为601788.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:45 scheduler.py[line:345] INFO wind编码：600958.SH 数据不全，不写入。
+2019-12-23 21:01:45 scheduler.py[line:345] INFO wind编码：601788.SH 数据不全，不写入。
+2019-12-23 21:01:47 scheduler.py[line:372] INFO 写入wind编码为600958.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:47 scheduler.py[line:372] INFO 写入wind编码为601788.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:47 scheduler.py[line:345] INFO wind编码：600958.SH 数据不全，不写入。
+2019-12-23 21:01:47 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:49 scheduler.py[line:372] INFO 写入wind编码为600958.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:49 scheduler.py[line:372] INFO 写入wind编码为601377.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:49 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:49 scheduler.py[line:345] INFO wind编码：601377.SH 数据不全，不写入。
+2019-12-23 21:01:51 scheduler.py[line:372] INFO 写入wind编码为601901.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:51 scheduler.py[line:372] INFO 写入wind编码为601377.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:51 scheduler.py[line:345] INFO wind编码：601901.SH 数据不全，不写入。
+2019-12-23 21:01:51 scheduler.py[line:345] INFO wind编码：601377.SH 数据不全，不写入。
+2019-12-23 21:01:53 scheduler.py[line:372] INFO 写入wind编码为601901.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:53 scheduler.py[line:372] INFO 写入wind编码为601377.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:53 scheduler.py[line:345] INFO wind编码：601901.SH 数据不全，不写入。
+2019-12-23 21:01:53 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:55 scheduler.py[line:372] INFO 写入wind编码为601901.SH的数据，日期：2019-12-20:
+2019-12-23 21:01:55 scheduler.py[line:372] INFO 写入wind编码为000001.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:55 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:01:55 scheduler.py[line:345] INFO wind编码：000001.SH 数据不全，不写入。
+2019-12-23 21:01:57 scheduler.py[line:372] INFO 写入wind编码为601788.SH的数据，日期：2019-12-22:
+2019-12-23 21:01:57 scheduler.py[line:372] INFO 写入wind编码为000001.SH的数据，日期：2019-12-21:
+2019-12-23 21:01:58 scheduler.py[line:345] INFO wind编码：601788.SH 数据不全，不写入。
+2019-12-23 21:01:58 scheduler.py[line:345] INFO wind编码：000001.SH 数据不全，不写入。
+2019-12-23 21:02:00 scheduler.py[line:372] INFO 写入wind编码为601788.SH的数据，日期：2019-12-21:
+2019-12-23 21:02:00 scheduler.py[line:372] INFO 写入wind编码为000001.SH的数据，日期：2019-12-20:
+2019-12-23 21:02:00 scheduler.py[line:345] INFO wind编码：601788.SH 数据不全，不写入。
+2019-12-23 21:02:00 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:02:02 scheduler.py[line:372] INFO 写入wind编码为601788.SH的数据，日期：2019-12-20:
+2019-12-23 21:02:02 scheduler.py[line:372] INFO 写入wind编码为002736.SZ的数据，日期：2019-12-22:
+2019-12-23 21:02:02 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:02:02 scheduler.py[line:345] INFO wind编码：002736.SZ 数据不全，不写入。
+2019-12-23 21:02:04 scheduler.py[line:372] INFO 写入wind编码为601377.SH的数据，日期：2019-12-22:
+2019-12-23 21:02:04 scheduler.py[line:345] INFO wind编码：601377.SH 数据不全，不写入。
+2019-12-23 21:02:04 scheduler.py[line:372] INFO 写入wind编码为002736.SZ的数据，日期：2019-12-21:
+2019-12-23 21:02:04 scheduler.py[line:345] INFO wind编码：002736.SZ 数据不全，不写入。
+2019-12-23 21:02:06 scheduler.py[line:372] INFO 写入wind编码为601377.SH的数据，日期：2019-12-21:
+2019-12-23 21:02:06 scheduler.py[line:372] INFO 写入wind编码为002736.SZ的数据，日期：2019-12-20:
+2019-12-23 21:02:06 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:02:06 scheduler.py[line:345] INFO wind编码：601377.SH 数据不全，不写入。
+2019-12-23 21:02:08 scheduler.py[line:377] INFO ************************ 写入安信证券财务数据 end ************************
+2019-12-23 21:02:08 base.py[line:144] INFO Job "saveTaskCwsj (trigger: cron[hour='21', minute='1'], next run at: 2019-12-24 21:01:01 CST)" executed successfully
+2019-12-23 21:02:08 scheduler.py[line:176] INFO executed successfully，time：2019-12-23 21:02:08
+2019-12-23 21:02:08 scheduler.py[line:372] INFO 写入wind编码为601377.SH的数据，日期：2019-12-20:
+2019-12-23 21:02:08 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:02:10 scheduler.py[line:372] INFO 写入wind编码为000001.SH的数据，日期：2019-12-22:
+2019-12-23 21:02:10 scheduler.py[line:345] INFO wind编码：000001.SH 数据不全，不写入。
+2019-12-23 21:02:12 scheduler.py[line:372] INFO 写入wind编码为000001.SH的数据，日期：2019-12-21:
+2019-12-23 21:02:13 scheduler.py[line:345] INFO wind编码：000001.SH 数据不全，不写入。
+2019-12-23 21:02:15 scheduler.py[line:372] INFO 写入wind编码为000001.SH的数据，日期：2019-12-20:
+2019-12-23 21:02:15 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:02:17 scheduler.py[line:372] INFO 写入wind编码为002736.SZ的数据，日期：2019-12-22:
+2019-12-23 21:02:17 scheduler.py[line:345] INFO wind编码：002736.SZ 数据不全，不写入。
+2019-12-23 21:02:19 scheduler.py[line:372] INFO 写入wind编码为002736.SZ的数据，日期：2019-12-21:
+2019-12-23 21:02:19 scheduler.py[line:345] INFO wind编码：002736.SZ 数据不全，不写入。
+2019-12-23 21:02:21 scheduler.py[line:372] INFO 写入wind编码为002736.SZ的数据，日期：2019-12-20:
+2019-12-23 21:02:21 scheduler.py[line:348] INFO 已存在当前交易日数据
+2019-12-23 21:02:23 scheduler.py[line:377] INFO ************************ 写入安信证券财务数据 end ************************
+2019-12-23 21:02:23 base.py[line:144] INFO Job "saveTaskCwsj (trigger: cron[hour='21', minute='1'], next run at: 2019-12-24 21:01:01 CST)" executed successfully
+2019-12-23 21:02:23 scheduler.py[line:176] INFO executed successfully，time：2019-12-23 21:02:23
+2019-12-23 21:04:54 base.py[line:123] INFO Running job "saveTaskYjzb (trigger: cron[hour='21', minute='5'], next run at: 2019-12-23 21:04:54 CST)" (scheduled at 2019-12-23 21:04:54.391117+08:00)
+2019-12-23 21:04:54 scheduler.py[line:629] INFO ************************ 写入上市公司(国投资本)业绩指标数据 start ************************
+2019-12-23 21:04:54 scheduler.py[line:660] INFO 写入wind编码为600061.SH的数据，日期：2019-06-30:
+2019-12-23 21:04:54 scheduler.py[line:618] INFO 已存在当前交易日数据
+2019-12-23 21:04:56 scheduler.py[line:660] INFO 写入wind编码为600061.SH的数据，日期：2019-09-30:
+2019-12-23 21:04:56 scheduler.py[line:618] INFO 已存在当前交易日数据
+2019-12-23 21:04:58 scheduler.py[line:666] INFO ************************ 写入上市公司(国投资本)业绩指标数据 end ************************
+2019-12-23 21:04:58 base.py[line:144] INFO Job "saveTaskYjzb (trigger: cron[hour='21', minute='5'], next run at: 2019-12-23 21:05:00 CST)" executed successfully
+2019-12-23 21:04:58 scheduler.py[line:176] INFO executed successfully，time：2019-12-23 21:04:58
+2019-12-23 21:05:00 base.py[line:123] INFO Running job "saveTaskYjzb (trigger: cron[hour='21', minute='5'], next run at: 2019-12-23 21:05:00 CST)" (scheduled at 2019-12-23 21:05:00+08:00)
+2019-12-23 21:05:00 scheduler.py[line:629] INFO ************************ 写入上市公司(国投资本)业绩指标数据 start ************************
+2019-12-23 21:05:00 scheduler.py[line:660] INFO 写入wind编码为600061.SH的数据，日期：2019-06-30:
+2019-12-23 21:05:00 scheduler.py[line:618] INFO 已存在当前交易日数据
+2019-12-23 21:05:02 scheduler.py[line:660] INFO 写入wind编码为600061.SH的数据，日期：2019-09-30:
+2019-12-23 21:05:02 scheduler.py[line:618] INFO 已存在当前交易日数据
+2019-12-23 21:05:04 scheduler.py[line:666] INFO ************************ 写入上市公司(国投资本)业绩指标数据 end ************************
+2019-12-23 21:05:04 base.py[line:144] INFO Job "saveTaskYjzb (trigger: cron[hour='21', minute='5'], next run at: 2019-12-24 21:04:38 CST)" executed successfully
+2019-12-23 21:05:04 scheduler.py[line:176] INFO executed successfully，time：2019-12-23 21:05:04
+2019-12-23 21:09:35 base.py[line:123] INFO Running job "saveTaskRzrq (trigger: cron[hour='21', minute='10'], next run at: 2019-12-23 21:09:35 CST)" (scheduled at 2019-12-23 21:09:35.693968+08:00)
+2019-12-23 21:09:35 scheduler.py[line:768] INFO ************************ 写入融资融券数据 start ************************
+2019-12-23 21:09:35 scheduler.py[line:778] INFO 写入wind编码为600061.SH的数据，日期：2019-12-22:
+2019-12-23 21:09:35 scheduler.py[line:751] INFO 写入条数：1,时间：2019-12-22
+2019-12-23 21:09:37 scheduler.py[line:778] INFO 写入wind编码为600061.SH的数据，日期：2019-12-21:
+2019-12-23 21:09:37 scheduler.py[line:751] INFO 写入条数：1,时间：2019-12-21
+2019-12-23 21:09:39 scheduler.py[line:778] INFO 写入wind编码为600061.SH的数据，日期：2019-12-20:
+2019-12-23 21:09:40 scheduler.py[line:757] INFO 已存在当前交易日数据
+2019-12-23 21:09:42 scheduler.py[line:783] INFO ************************ 写入融资融券数据 end ************************
+2019-12-23 21:09:42 base.py[line:144] INFO Job "saveTaskRzrq (trigger: cron[hour='21', minute='10'], next run at: 2019-12-23 21:10:28 CST)" executed successfully
+2019-12-23 21:09:42 scheduler.py[line:176] INFO executed successfully，time：2019-12-23 21:09:42
+2019-12-23 21:10:28 base.py[line:123] INFO Running job "saveTaskRzrq (trigger: cron[hour='21', minute='10'], next run at: 2019-12-23 21:10:28 CST)" (scheduled at 2019-12-23 21:10:28.721777+08:00)
+2019-12-23 21:10:28 scheduler.py[line:768] INFO ************************ 写入融资融券数据 start ************************
+2019-12-23 21:10:28 scheduler.py[line:778] INFO 写入wind编码为600061.SH的数据，日期：2019-12-22:
+2019-12-23 21:10:28 scheduler.py[line:757] INFO 已存在当前交易日数据
+2019-12-23 21:10:30 scheduler.py[line:778] INFO 写入wind编码为600061.SH的数据，日期：2019-12-21:
+2019-12-23 21:10:30 scheduler.py[line:757] INFO 已存在当前交易日数据
+2019-12-23 21:10:32 scheduler.py[line:778] INFO 写入wind编码为600061.SH的数据，日期：2019-12-20:
+2019-12-23 21:10:32 scheduler.py[line:757] INFO 已存在当前交易日数据
+2019-12-23 21:10:34 scheduler.py[line:783] INFO ************************ 写入融资融券数据 end ************************
+2019-12-23 21:10:34 base.py[line:144] INFO Job "saveTaskRzrq (trigger: cron[hour='21', minute='10'], next run at: 2019-12-24 21:09:42 CST)" executed successfully
+2019-12-23 21:10:34 scheduler.py[line:176] INFO executed successfully，time：2019-12-23 21:10:34

@@ -10,5 +10,5 @@ MySQL：pip install pymysql
 2、修复后点击窗口下方“配置详情”，显示python安装目录即可，没有则需手动添加，点击“添加路径”添加python安装目录即可
 
 三、执行定时任务
-1、定时任务文件：scheduler.py
-2、打开cmd窗口，进入定时任务文件所在目录，执行命令：python scheduler.py
+1、调整scheduler.py文件的数据库配置信息
+2、执行定时任务，打开cmd窗口，进入定时任务文件所在目录，执行命令：python scheduler.py
