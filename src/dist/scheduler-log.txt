@@ -1,0 +1,33 @@
+2019-12-04 11:38:03 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-04 11:38:03 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-04 11:38:03 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-04 11:38:03 base.py[line:881] INFO Added job "saveTaskCwsj" to job store "default"
+2019-12-04 11:38:03 base.py[line:881] INFO Added job "saveTaskCwsj" to job store "default"
+2019-12-04 11:38:03 base.py[line:881] INFO Added job "saveTaskYjzb" to job store "default"
+2019-12-04 11:38:03 base.py[line:166] INFO Scheduler started
+2019-12-04 11:40:09 base.py[line:123] INFO Running job "saveTaskCwsj (trigger: cron[hour='11', minute='40'], next run at: 2019-12-04 11:40:09 CST)" (scheduled at 2019-12-04 11:40:09.498019+08:00)
+2019-12-04 11:40:09 scheduler.py[line:359] INFO ************************ 写入安信证券财务数据 start ************************
+2019-12-04 11:40:09 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-03:
+2019-12-04 11:40:09 scheduler.py[line:342] INFO 写入条数：1,时间：2019-12-03
+2019-12-04 11:40:11 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-02:
+2019-12-04 11:40:12 scheduler.py[line:342] INFO 写入条数：1,时间：2019-12-02
+2019-12-04 11:40:14 scheduler.py[line:372] INFO 写入wind编码为600061.SH的数据，日期：2019-12-01:
+2019-12-04 11:40:14 scheduler.py[line:345] INFO wind编码：600061.SH 数据不全，不写入。
+2019-12-04 11:40:16 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-03:
+2019-12-04 11:40:16 scheduler.py[line:342] INFO 写入条数：1,时间：2019-12-03
+2019-12-04 11:40:18 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-02:
+2019-12-04 11:40:18 scheduler.py[line:342] INFO 写入条数：1,时间：2019-12-02
+2019-12-04 11:40:20 scheduler.py[line:372] INFO 写入wind编码为882501.WI的数据，日期：2019-12-01:
+2019-12-04 11:40:20 scheduler.py[line:345] INFO wind编码：882501.WI 数据不全，不写入。
+2019-12-04 11:40:22 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-03:
+2019-12-04 11:40:22 scheduler.py[line:342] INFO 写入条数：1,时间：2019-12-03
+2019-12-04 11:40:24 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-02:
+2019-12-04 11:40:24 scheduler.py[line:342] INFO 写入条数：1,时间：2019-12-02
+2019-12-04 11:40:26 scheduler.py[line:372] INFO 写入wind编码为600705.SH的数据，日期：2019-12-01:
+2019-12-04 11:40:27 scheduler.py[line:345] INFO wind编码：600705.SH 数据不全，不写入。
+2019-12-04 11:40:29 scheduler.py[line:372] INFO 写入wind编码为600390.SH的数据，日期：2019-12-03:
+2019-12-04 11:40:29 scheduler.py[line:342] INFO 写入条数：1,时间：2019-12-03
+2019-12-04 11:44:56 base.py[line:123] INFO Running job "saveTaskCwsj (trigger: cron[hour='11', minute='45'], next run at: 2019-12-04 11:44:56 CST)" (scheduled at 2019-12-04 11:44:56.589303+08:00)
+2019-12-04 11:45:10 base.py[line:978] WARNING Execution of job "saveTaskCwsj (trigger: cron[hour='11', minute='45'], next run at: 2019-12-04 11:45:10 CST)" skipped: maximum number of running instances reached (1)
+2019-12-04 11:49:30 base.py[line:123] INFO Running job "saveTaskYjzb (trigger: cron[hour='11', minute='50'], next run at: 2019-12-04 11:49:30 CST)" (scheduled at 2019-12-04 11:49:30.101260+08:00)
+2019-12-04 11:50:08 base.py[line:978] WARNING Execution of job "saveTaskYjzb (trigger: cron[hour='11', minute='50'], next run at: 2019-12-04 11:50:08 CST)" skipped: maximum number of running instances reached (1)

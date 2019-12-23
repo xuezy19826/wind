@@ -1,0 +1,7 @@
+2019-12-04 19:12:31 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-04 19:12:31 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-04 19:12:31 base.py[line:881] INFO Added job "saveTaskCwsj" to job store "default"
+2019-12-04 19:12:31 base.py[line:881] INFO Added job "saveTaskYjzb" to job store "default"
+2019-12-04 19:12:31 base.py[line:166] INFO Scheduler started
+2019-12-23 21:00:05 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-23 21:00:05 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts

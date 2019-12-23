@@ -1,0 +1,14 @@
+一、安装phtyon
+1、安装3.7.4
+   自定义安装，选择pip
+2、安装插件
+定时任务：pip install apscheduler
+MySQL：pip install pymysql
+
+二、安装wind客户端
+1、安装完成登录成功后，点击左上角“我的”==>“插件修复”==>“修复python接口”
+2、修复后点击窗口下方“配置详情”，显示python安装目录即可，没有则需手动添加，点击“添加路径”添加python安装目录即可
+
+三、执行定时任务
+1、定时任务文件：scheduler.py
+2、打开cmd窗口，进入定时任务文件所在目录，执行命令：python scheduler.py
