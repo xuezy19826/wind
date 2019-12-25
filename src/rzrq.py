@@ -9,6 +9,7 @@
 from mysqlutil import MySQLDB
 import datetime
 import time as time1
+import pandas as pd
 import logging
 from WindPy import *
 w.start()
@@ -169,28 +170,28 @@ class Rzrq:
             else:
                 # 融资买入(周期=日)-买入额(元)
                 list = data.Data[0]
-                temp = "" if (list[0]) == None else str(list[0])
+                temp = "" if pd.isnull(list[0]) else str(list[0])
                 # 融资买入(周期=日)-偿还额(元)
                 list1 = data.Data[1]
-                temp1 = "" if (list1[0]) == None else str(list1[0])
+                temp1 = "" if pd.isnull(list1[0]) else str(list1[0])
                 # 融券卖出(周期=日)-卖出量(股)
                 list2 = data.Data[2]
-                temp2 = "" if (list2[0]) == None else str(list2[0])
+                temp2 = "" if pd.isnull(list2[0]) else str(list2[0])
                 # 融券卖出(周期=日)-偿还量(股)
                 list3 = data.Data[3]
-                temp3 = "" if (list3[0]) == None else str(list3[0])
+                temp3 = "" if pd.isnull(list3[0]) else str(list3[0])
                 # 期末余额(余量)-融资余额(元)
                 list4 = data.Data[4]
-                temp4 = "" if (list4[0]) == None else str(list4[0])
+                temp4 = "" if pd.isnull(list4[0]) else str(list4[0])
                 # 期末余额(余量)-融券余额(元)
                 list5 = data.Data[5]
-                temp5 = "" if (list5[0]) == None else str(list5[0])
+                temp5 = "" if pd.isnull(list5[0]) else str(list5[0])
                 # 期末余额(余量)-融券余量(股)
                 list6 = data.Data[6]
-                temp6 = "" if (list6[0]) == None else str(list6[0])
+                temp6 = "" if pd.isnull(list6[0]) else str(list6[0])
                 # A股市值(不含限售股)(元)
                 list7 = data.Data[7]
-                temp7 = "" if (list7[0]) == None else str(list7[0])
+                temp7 = "" if pd.isnull(list7[0]) else str(list7[0])
 
                 if temp != "" and temp1 != "" and temp2 != "" and temp3 != "" and temp4 != "" and temp5 != "" and temp6 != "" and temp7 != "":
                     tempStr = '({0},{1},{2},{3},{4},{5},{6},{7},{8})'.format(
@@ -230,7 +231,8 @@ class Rzrq:
         dt = datetime.now() + timedelta(days=-1)
         dt2 = datetime.now() + timedelta(days=-2)
         dt3 = datetime.now() + timedelta(days=-3)
-        dtList = [dt, dt2, dt3]
+        dt4 = datetime.now() + timedelta(days=-4)
+        dtList = [dt, dt2, dt3, dt4]
 
         windCode = "600061.SH"
         for dt in dtList:
@@ -243,6 +245,6 @@ class Rzrq:
         logging.info('************************ 写入融资融券数据 end ************************')
 
 if __name__ == '__main__':
-    # Rzrq.saveTaskRzrq()
+    Rzrq.saveTaskRzrq()
     # 批量写入其他企业数据 近两年
-    Rzrq.saveBatchRzrq()
+    # Rzrq.saveBatchRzrq()

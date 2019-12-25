@@ -206,3 +206,21 @@
 2019-12-23 21:10:34 scheduler.py[line:783] INFO ************************ 写入融资融券数据 end ************************
 2019-12-23 21:10:34 base.py[line:144] INFO Job "saveTaskRzrq (trigger: cron[hour='21', minute='10'], next run at: 2019-12-24 21:09:42 CST)" executed successfully
 2019-12-23 21:10:34 scheduler.py[line:176] INFO executed successfully，time：2019-12-23 21:10:34
+2019-12-25 16:28:54 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-25 16:28:54 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-25 16:28:54 base.py[line:440] INFO Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2019-12-25 16:28:54 base.py[line:881] INFO Added job "saveTaskCwsj" to job store "default"
+2019-12-25 16:28:54 base.py[line:881] INFO Added job "saveTaskYjzb" to job store "default"
+2019-12-25 16:28:54 base.py[line:881] INFO Added job "saveTaskRzrq" to job store "default"
+2019-12-25 16:28:54 base.py[line:166] INFO Scheduler started
+2019-12-25 16:30:08 base.py[line:123] INFO Running job "saveTaskRzrq (trigger: cron[hour='16', minute='30'], next run at: 2019-12-25 16:30:08 CST)" (scheduled at 2019-12-25 16:30:08.057620+08:00)
+2019-12-25 16:30:08 scheduler.py[line:769] INFO ************************ 写入融资融券数据 start ************************
+2019-12-25 16:30:08 scheduler.py[line:779] INFO 写入wind编码为600061.SH的数据，日期：2019-12-24:
+2019-12-25 16:30:08 scheduler.py[line:752] INFO 写入条数：1,时间：2019-12-24
+2019-12-25 16:30:10 scheduler.py[line:779] INFO 写入wind编码为600061.SH的数据，日期：2019-12-23:
+2019-12-25 16:30:10 scheduler.py[line:752] INFO 写入条数：1,时间：2019-12-23
+2019-12-25 16:30:12 scheduler.py[line:779] INFO 写入wind编码为600061.SH的数据，日期：2019-12-22:
+2019-12-25 16:30:12 scheduler.py[line:755] INFO wind编码：600061.SH 数据不全，不写入。
+2019-12-25 16:30:14 scheduler.py[line:784] INFO ************************ 写入融资融券数据 end ************************
+2019-12-25 16:30:14 base.py[line:144] INFO Job "saveTaskRzrq (trigger: cron[hour='16', minute='30'], next run at: 2019-12-26 16:30:18 CST)" executed successfully
+2019-12-25 16:30:14 scheduler.py[line:177] INFO executed successfully，time：2019-12-25 16:30:14

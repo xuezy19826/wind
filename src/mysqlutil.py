@@ -28,7 +28,7 @@ class MySQLDB(object):
         self.port = 3306  # 端口号
         self.user = 'root'  # 用户名
         self.password = "Uecom@server"  # 密码
-        self.db = "gtzb_test"  # 库
+        self.db = "gtzb_dev"  # 库
 
     # 连接数据库
     def connectMysql(self):

@@ -13,6 +13,7 @@ import time as time1
 import pymysql
 import sys
 import traceback
+import pandas as pd
 
 from apscheduler.triggers.interval import IntervalTrigger
 from apscheduler.triggers.cron import CronTrigger
@@ -38,8 +39,6 @@ class MySQLDB(object):
         self.user = 'root'  # 用户名
         self.password = "Uecom@server"  # 密码
         self.db = "gtzb_dev"  # 库
-
-
 
     # 连接数据库
     def connectMysql(self):
@@ -704,28 +703,28 @@ def insertSpeDateRzrq(windCode, dt):
         else:
             # 融资买入(周期=日)-买入额(元)
             list = data.Data[0]
-            temp = "" if (list[0]) == None else str(list[0])
+            temp = "" if pd.isnull(list[0]) else str(list[0])
             # 融资买入(周期=日)-偿还额(元)
             list1 = data.Data[1]
-            temp1 = "" if (list1[0]) == None else str(list1[0])
+            temp1 = "" if pd.isnull(list1[0]) else str(list1[0])
             # 融券卖出(周期=日)-卖出量(股)
             list2 = data.Data[2]
-            temp2 = "" if (list2[0]) == None else str(list2[0])
+            temp2 = "" if pd.isnull(list2[0]) else str(list2[0])
             # 融券卖出(周期=日)-偿还量(股)
             list3 = data.Data[3]
-            temp3 = "" if (list3[0]) == None else str(list3[0])
+            temp3 = "" if pd.isnull(list3[0]) else str(list3[0])
             # 期末余额(余量)-融资余额(元)
             list4 = data.Data[4]
-            temp4 = "" if (list4[0]) == None else str(list4[0])
+            temp4 = "" if pd.isnull(list4[0]) else str(list4[0])
             # 期末余额(余量)-融券余额(元)
             list5 = data.Data[5]
-            temp5 = "" if (list5[0]) == None else str(list5[0])
+            temp5 = "" if pd.isnull(list5[0]) else str(list5[0])
             # 期末余额(余量)-融券余量(股)
             list6 = data.Data[6]
-            temp6 = "" if (list6[0]) == None else str(list6[0])
+            temp6 = "" if pd.isnull(list6[0]) else str(list6[0])
             # A股市值(不含限售股)(元)
             list7 = data.Data[7]
-            temp7 = "" if (list7[0]) == None else str(list7[0])
+            temp7 = "" if pd.isnull(list7[0]) else str(list7[0])
 
             if temp != "" and temp1 != "" and temp2 != "" and temp3 != "" and temp4 != "" and temp5 != "" and temp6 != "" and temp7 != "":
                 tempStr = '({0},{1},{2},{3},{4},{5},{6},{7},{8})'.format(
@@ -787,7 +786,7 @@ if __name__ == '__main__':
     # 安信证券-财务报表
     #每天8:15、20：15各执行一次（获取近3天的数据，有数据了不再写入）;有了这个jitter参数，它会使每个任务提前或延后+30/-30秒范围去运行
     # cwsj_trigger = CronTrigger(hour='13', minute='15', jitter=30)
-    cwsj_trigger2 = CronTrigger(hour='21', minute='01', jitter=30)
+    cwsj_trigger2 = CronTrigger(hour='02', minute='01', jitter=30)
     # scheduler.add_job(saveTaskCwsj, cwsj_trigger)
 
     # submit_job(提交任务)时加1，在_run_job_success(任务运行成功)时减1。 当self._instances[job.id]大于job.max_instances抛出异常。
@@ -799,11 +798,11 @@ if __name__ == '__main__':
     # scheduler.add_job(saveTaskDzjy, dzjy_trigger)
 
     # 国投资本-上市公司业绩指标（获取近两个季度的数据）
-    yjzb_trigger = CronTrigger(hour='21', minute='05', jitter=30)
+    yjzb_trigger = CronTrigger(hour='02', minute='15', jitter=30)
     scheduler.add_job(saveTaskYjzb, yjzb_trigger, max_instances = 10, id = "2")
 
     # 国投资本-融资融券（（获取近3天的数据，有数据了不再写入））
-    yjzb_trigger = CronTrigger(hour='21', minute='10', jitter=30)
+    yjzb_trigger = CronTrigger(hour='02', minute='30', jitter=30)
     scheduler.add_job(saveTaskRzrq, yjzb_trigger, max_instances=10, id="3")
 
 
@@ -816,7 +815,7 @@ if __name__ == '__main__':
     try:
         # 模拟主进程持续运行，每一天打印一次 86400
         while True:
-            time1.sleep(30 * 60)
+            time1.sleep(1 * 60)
             print ('currenttime：',datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     except(KeyboardInterrupt, SystemExit):
         scheduler.shutdown()
