@@ -1,8 +1,8 @@
 # -*- coding：utf-8 -*-#
 
 #--------------------------------------------------------------
-#NAME:          main5
-#Description:
+#NAME:          shceduler.py
+#Description:   定时获取wind数据
 #Author:        xuezy
 #Date:          2019/9/20
 #--------------------------------------------------------------
@@ -27,18 +27,18 @@ class MySQLDB(object):
     # 类的初始化
     def __init__(self):
         # 本地连接
-        # self.host = 'localhost'
-        # self.port = 3306  # 端口号
-        # self.user = 'root'  # 用户名
-        # self.password = "root"  # 密码
-        # self.db = "wind"  # 库
-
-        # 99连接
-        self.host = '192.168.12.99'
+        self.host = 'localhost'
         self.port = 3306  # 端口号
         self.user = 'root'  # 用户名
-        self.password = "Uecom@server"  # 密码
-        self.db = "gtzb_dev"  # 库
+        self.password = "root"  # 密码
+        self.db = "wind"  # 库
+
+        # 99连接
+        # self.host = '192.168.12.99'
+        # self.port = 3306  # 端口号
+        # self.user = 'root'  # 用户名
+        # self.password = "Uecom@server"  # 密码
+        # self.db = "gtzb_prod"  # 库
 
     # 连接数据库
     def connectMysql(self):
@@ -137,7 +137,6 @@ class MySQLDB(object):
         try:
             self.cursor.execute(sql)
             result = self.cursor.fetchall()
-            print(result)
         except:
             info = sys.exc_info()
             print('[MySQLDB==>select_list] 异常：\n', info[0], ':', info[1])
@@ -151,7 +150,7 @@ class MySQLDB(object):
         self.conn.close()
 
 
-# 配置日志记录信息，日志文件在当前路径，文件名为 “log1.txt”
+# 配置日志记录信息，日志文件在当前路径，文件名为 “scheduler-log.txt”
 logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S',
@@ -583,7 +582,7 @@ def insertYjzb(windCode, dateParam):
             temp10 = "" if (list10[0]) == None or (str(list10[0])) == 'nan' else str(list10[0])
 
             # 属性都为空，则没有数据，不写入
-            if temp == "" and temp1 == "" and temp2 == "" and temp3 == "" and temp4 == "" and temp5 == "" and temp6 == "" and temp7 == "" and temp8 == "" and temp9 == "":
+            if temp == "" and temp1 == "" and temp2 == "" and temp3 == "" and temp4 == "" and temp5 == "" and temp6 == "" and temp7 == "" and temp8 == "" and temp9 == "0":
                 print('wind编码：', windCode, ' 无数据，数据时间：', dateParam, ';获取数据的时间：', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
                 logging.info('wind编码：' + windCode + ' 无数据，数据时间：' + dateParam +  ';获取数据的时间：' + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
             else:
@@ -777,6 +776,127 @@ def saveTaskRzrq():
     logging.info('************************ 写入融资融券数据 end ************************')
 # --------------------------------------------国投资本-融资融券 end -----------------------------------------------------
 
+# --------------------------------------------违约债地域分布数据 start -----------------------------------------------------
+def insertSpeDateWyzdyfb(dt):
+    '''
+    导入指定日期的数据
+    :param dt: 日期参数
+    :return:
+    '''
+    dateParamFormat = dt.strftime('%Y-%m-%d')
+    mysql = MySQLDB()
+    mysql.connectMysql()
+    selectSql = "select * from wind_wyzdyfb where trade_date = '" + dateParamFormat + "'"
+    result = mysql.select_list(selectSql)
+    if result.__len__() == 0:
+        # 拼接wset函数尾部内容
+        param = "enddate=" + dateParamFormat
+
+        '''
+        wset数据集：只能取指定日期的数据
+        '''
+        # w.wset("defaultbondbyprovince","enddate=2020-05-12")
+        data = w.wset("defaultbondbyprovince",param)
+        errorCode = data.ErrorCode
+        if errorCode != 0:
+            if errorCode == -40522017:
+                print('从wind获取数据出错，错误代码：', errorCode, '，数据提取量超限')
+                logging.error('从wind获取数据出错，错误代码：' + str(errorCode) + '，数据提取量超限')
+            else:
+                print('从wind获取数据出错，错误代码：', errorCode)
+                logging.error('从wind获取数据出错，错误代码：' + str(errorCode))
+        else:
+            # 省（直辖市）id
+            list = data.Data[0]
+            # 省（直辖市）
+            list1 = data.Data[1]
+            # 违约债只数
+            list2 = data.Data[2]
+            # 违约债券余额（亿元）
+            list3 = data.Data[3]
+            # 余额违约率（%）
+            list4 = data.Data[4]
+            # 违约发行人个数
+            list5 = data.Data[5]
+            # 发行人个数违约比率（%）
+            list6 = data.Data[6]
+
+            # 获取数据量
+            size = len(list)
+
+            if size > 0:
+                i = 0
+                appendStr = ''
+                while i < size:
+                    # 省（直辖市）id
+                    temp = "" if (list[i]) == None else str(list[i])
+                    # 省（直辖市）
+                    temp1 = "" if (list1[i]) == None else str(list1[i])
+                    # 违约债只数
+                    temp2 = "" if (list2[i]) == None else str(list2[i])
+                    # 违约债券余额（亿元）
+                    temp3 = "" if (list3[i]) == None else str(list3[i])
+                    # 余额违约率（%）
+                    temp4 = "" if (list4[i]) == None else str(list4[i])
+                    # 违约发行人个数
+                    temp5 = "" if (list5[i]) == None else str(list5[i])
+                    # 发行人个数违约比率（%）
+                    temp6 = "" if (list6[i]) == None else str(list6[i])
+
+                    # 属性 均不为空 写入该条数据
+                    if temp != "" and temp1 != "" and temp2 != "" and temp3 != "" and temp4 != "" and temp5 != "" and temp6 != "" :
+                        tempStr = '({0},{1},{2},{3},{4},{5},{6},{7}),'.format(
+                            "'" + dateParamFormat + "'",
+                            "'" + temp + "'",
+                            "'" + temp1 + "'",
+                            "'" + temp2 + "'",
+                            "'" + temp3 + "'",
+                            "'" + temp4 + "'",
+                            "'" + temp5 + "'",
+                            "'" + temp6 + "'"
+                        )
+                        appendStr = appendStr + tempStr
+                    i += 1
+
+                # 有数据，做插入操作
+                if (len(appendStr) != 0):
+                    mysql = MySQLDB()
+                    mysql.connectMysql()
+                    # 写入语句
+                    sql = "insert into wind_wyzdyfb(TRADE_DATE,PROVINCE_SECTOR_ID,PROVINCE,BONDNUM,OUTSTANDING,OUTSTANDING_RATIO,PUBLISHER_NUM,PUBLISHER_NUM_RATIO) values"
+                    insertSql = sql + appendStr[0:len(appendStr) - 1]
+                    n = mysql.insert(insertSql)
+                    print('写入条数：', n, ';数据时间：', dateParamFormat)
+                    logging.info('写入条数：' + str(n) + ';数据时间：' + dateParamFormat)
+    else:
+        print('已存在当前交易日数据')
+        logging.info('已存在当前交易日数据')
+    # 关闭连接
+    mysql.conn.close()
+
+def saveTaskWyzdyfb():
+    '''
+    批量写入指定日期数据
+    :return:
+    '''
+    print('************************ 写入违约债地域分布数据 start ************************')
+    logging.info('************************ 写入违约债地域分布数据 start ************************')
+
+    # 获取前3天时间，有不写入，无则写入
+    dt = datetime.now() + timedelta(days=-1)
+    dt2 = datetime.now() + timedelta(days=-2)
+    dt3 = datetime.now() + timedelta(days=-3)
+    dtList = [dt, dt2, dt3]
+    for dt in dtList:
+        print('写入数据，日期：', dt.strftime('%Y-%m-%d'))
+        logging.info('写入数据，日期：' + dt.strftime('%Y-%m-%d'))
+        insertSpeDateWyzdyfb(dt)
+        # 写入时间，间隔2秒
+        time1.sleep(2)
+    print('************************ 写入违约债地域分布数据 end ************************')
+    logging.info('************************ 写入违约债地域分布数据 end ************************')
+# --------------------------------------------违约债地域分布数据 end -----------------------------------------------------
+
 if __name__ == '__main__':
     scheduler = BackgroundScheduler()
 
@@ -801,9 +921,13 @@ if __name__ == '__main__':
     yjzb_trigger = CronTrigger(hour='02', minute='15', jitter=30)
     scheduler.add_job(saveTaskYjzb, yjzb_trigger, max_instances = 10, id = "2")
 
-    # 国投资本-融资融券（（获取近3天的数据，有数据了不再写入））
-    yjzb_trigger = CronTrigger(hour='02', minute='30', jitter=30)
-    scheduler.add_job(saveTaskRzrq, yjzb_trigger, max_instances=10, id="3")
+    # 国投资本-融资融券（获取近3天的数据，有数据了不再写入）
+    rzrq_trigger = CronTrigger(hour='02', minute='30', jitter=30)
+    scheduler.add_job(saveTaskRzrq, rzrq_trigger, max_instances=10, id="3")
+
+    # 违约债地域分布数据（获取近3天的数据，有数据了不再写入）
+    wyzdyfb_trigger = CronTrigger(hour='02', minute='45', jitter=30)
+    scheduler.add_job(saveTaskWyzdyfb, wyzdyfb_trigger, max_instances=10, id="4")
 
 
     # 启用 scheduler 模块的日记记录

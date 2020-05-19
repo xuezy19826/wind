@@ -91,7 +91,7 @@ class Yjzb:
                 temp10 = "" if (list10[0]) == None or (str(list10[0])) == 'nan' else str(list10[0])
 
                 # 属性都为空，则没有数据，不写入
-                if temp == "" and temp1 == "" and temp2 == "" and temp3 == "" and temp4 == "" and temp5 == "" and temp6 == "" and temp7 == "" and temp8 == "" and temp9 == "":
+                if temp == "" and temp1 == "" and temp2 == "" and temp3 == "" and temp4 == "" and temp5 == "" and temp6 == "" and temp7 == "" and temp8 == "" and temp9 == "0":
                     print('wind编码：', windCode, ' 无数据，数据时间：', dateParam, ';获取数据的时间：', datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
                     logging.info('wind编码：' + windCode + ' 无数据，数据时间：' + dateParam +  ';获取数据的时间：' + datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
                 else:
