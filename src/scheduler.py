@@ -883,10 +883,10 @@ def saveTaskWyzdyfb():
     logging.info('************************ 写入违约债地域分布数据 start ************************')
 
     # 获取前3天时间，有不写入，无则写入
-    dt = datetime.now() + timedelta(days=-1)
-    dt2 = datetime.now() + timedelta(days=-2)
-    dt3 = datetime.now() + timedelta(days=-3)
-    dtList = [dt, dt2, dt3]
+    dt = datetime.now()+ timedelta(days=-1)
+    dt1 = datetime.now() + timedelta(days=-2)
+    dt2 = datetime.now() + timedelta(days=-3)
+    dtList = [dt, dt1, dt2]
     for dt in dtList:
         print('写入数据，日期：', dt.strftime('%Y-%m-%d'))
         logging.info('写入数据，日期：' + dt.strftime('%Y-%m-%d'))
@@ -903,32 +903,30 @@ if __name__ == '__main__':
     # 添加监听
     scheduler.add_listener(my_listener, EVENT_JOB_EXECUTED | EVENT_JOB_ERROR)
 
-    # 安信证券-财务报表
+    # 安信证券-财务报表（获取前3天的数据）
     #每天8:15、20：15各执行一次（获取近3天的数据，有数据了不再写入）;有了这个jitter参数，它会使每个任务提前或延后+30/-30秒范围去运行
-    # cwsj_trigger = CronTrigger(hour='13', minute='15', jitter=30)
-    cwsj_trigger2 = CronTrigger(hour='02', minute='01', jitter=30)
-    # scheduler.add_job(saveTaskCwsj, cwsj_trigger)
+    cwsj_trigger = CronTrigger(hour='15', minute='08', jitter=30)
 
     # submit_job(提交任务)时加1，在_run_job_success(任务运行成功)时减1。 当self._instances[job.id]大于job.max_instances抛出异常。
     # max_instances默认值为1，它表示id相同的任务实例数
-    scheduler.add_job(saveTaskCwsj, cwsj_trigger2, max_instances = 10, id = "1")
+    # misfire_grace_time允许容错的时间，单位为：s   解决was  miss  by 错误
+    scheduler.add_job(saveTaskCwsj, cwsj_trigger, max_instances=10, misfire_grace_time=3600, id = "1")
 
     # 国投资本-大宗交易（获取近2天的数据）
     # dzjy_trigger = CronTrigger(hour='20', minute='30', jitter=30)
     # scheduler.add_job(saveTaskDzjy, dzjy_trigger)
 
     # 国投资本-上市公司业绩指标（获取近两个季度的数据）
-    yjzb_trigger = CronTrigger(hour='02', minute='15', jitter=30)
-    scheduler.add_job(saveTaskYjzb, yjzb_trigger, max_instances = 10, id = "2")
+    yjzb_trigger = CronTrigger(hour='15', minute='15', jitter=30)
+    scheduler.add_job(saveTaskYjzb, yjzb_trigger, max_instances=10, misfire_grace_time=3600, id = "2")
 
-    # 国投资本-融资融券（获取近3天的数据，有数据了不再写入）
-    rzrq_trigger = CronTrigger(hour='02', minute='30', jitter=30)
-    scheduler.add_job(saveTaskRzrq, rzrq_trigger, max_instances=10, id="3")
+    # 国投资本-融资融券（获取前3天的数据，有数据了不再写入）
+    rzrq_trigger = CronTrigger(hour='15', minute='30', jitter=30)
+    scheduler.add_job(saveTaskRzrq, rzrq_trigger, max_instances=10, misfire_grace_time=3600, id="3")
 
-    # 违约债地域分布数据（获取近3天的数据，有数据了不再写入）
-    wyzdyfb_trigger = CronTrigger(hour='02', minute='45', jitter=30)
-    scheduler.add_job(saveTaskWyzdyfb, wyzdyfb_trigger, max_instances=10, id="4")
-
+    # 违约债地域分布数据（获取前3天的数据，有数据了不再写入）
+    wyzdyfb_trigger = CronTrigger(hour='15', minute='45', jitter=30)
+    scheduler.add_job(saveTaskWyzdyfb, wyzdyfb_trigger, max_instances=10, misfire_grace_time=3600, id="4")
 
     # 启用 scheduler 模块的日记记录
     scheduler._logger = logging
